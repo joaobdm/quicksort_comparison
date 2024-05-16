@@ -1,3 +1,4 @@
+import sys
 import numpy
 from typing import Final
 import time
@@ -6,13 +7,15 @@ import multiprocessing
 from serial_quicksort import serial_quicksort
 from parallel_quicksort import parallel_quicksort
 
-LENGTH_OF_INT_LIST: Final = 20_000_000
-MAX_POSSIBLE_INT_VALUE = 100_000_000
+LENGTH_OF_INT_LIST: Final = 10_000_000
+MAX_POSSIBLE_INT_VALUE = sys.maxsize
+MIN_POSSIBLE_INT_VALUE = -sys.maxsize - 1
+
 
 def main():
     print("\nInitializing list copies to be sorted (this may take some time)...")
 
-    int_list = numpy.random.randint(0, MAX_POSSIBLE_INT_VALUE, size=(LENGTH_OF_INT_LIST,))
+    int_list = numpy.random.randint(MIN_POSSIBLE_INT_VALUE, MAX_POSSIBLE_INT_VALUE, size=(LENGTH_OF_INT_LIST,))
 
     int_list = int_list.tolist()
 
