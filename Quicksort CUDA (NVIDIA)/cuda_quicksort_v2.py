@@ -42,7 +42,7 @@ def quicksort(arr):
 
     d_arr.copy_to_host(arr)
 
-LENGTH_OF_INT_LIST: Final = 100_000
+LENGTH_OF_INT_LIST: Final = 10_000_000
 MAX_POSSIBLE_INT_VALUE = sys.maxsize
 MIN_POSSIBLE_INT_VALUE = -sys.maxsize - 1
 
