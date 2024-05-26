@@ -1,0 +1,4 @@
+name: quickcomp
+channels:
+  - defaults
+prefix: /home/felipe/anaconda3/envs/quickcomp
