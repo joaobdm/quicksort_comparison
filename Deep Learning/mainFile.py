@@ -9,7 +9,9 @@ import os.path
 print('Início: ', end='') 
 print(datetime.datetime.now())
 
-my_checkpoint_path = '/home/felipe/Me/doutorado/quicksort_comparison/tmp/checkpt/'
+# my_checkpoint_path = '/home/felipe/Me/doutorado/quicksort_comparison/tmp/checkpt/'
+my_checkpoint_path = './tmp/checkpt/'
+
 best_model_name = 'best.pkl'
 
 rng = np.random.RandomState(1234)
@@ -66,10 +68,13 @@ model.init(dummy_trajectory.features, 1234)
 #carrega o último checkpoint
 if os.path.isfile(my_checkpoint_path + best_model_name):
     model.restore_model(best_model_name)
+    print('Previous model restored')
+else:
+    print('Creating new model')
 
 step = 0
 best_score = 0
-while step <= 500:
+while step <= 10:
     feedback, test_feedback = next(train_sampler), next(test_sampler)
     rng_key, new_rng_key = jax.random.split(rng_key)
     cur_loss = model.feedback(rng_key, feedback)
