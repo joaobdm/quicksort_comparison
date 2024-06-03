@@ -1,0 +1,13 @@
+Início: 2024-06-03 00:23:42.910052
+Spec:
+{'A': ('input', 'edge', 'scalar'),
+ 'adj': ('input', 'edge', 'mask'),
+ 'd': ('hint', 'node', 'scalar'),
+ 'msk': ('hint', 'node', 'mask'),
+ 'pi': ('output', 'node', 'pointer'),
+ 'pi_h': ('hint', 'node', 'pointer'),
+ 'pos': ('input', 'node', 'scalar'),
+ 's': ('input', 'node', 'mask_one')}
+Creating new model
+
+Fim: 2024-06-03 00:32:37.897532

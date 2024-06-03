@@ -1,0 +1,12 @@
+Início: 2024-06-03 00:33:18.072637
+Spec:
+{'A': ('input', 'edge', 'scalar'),
+ 'adj': ('input', 'edge', 'mask'),
+ 'd': ('hint', 'node', 'scalar'),
+ 'msk': ('hint', 'node', 'mask'),
+ 'pi': ('output', 'node', 'pointer'),
+ 'pi_h': ('hint', 'node', 'pointer'),
+ 'pos': ('input', 'node', 'scalar'),
+ 's': ('input', 'node', 'mask_one')}
+
+Fim: 2024-06-03 00:42:26.204501

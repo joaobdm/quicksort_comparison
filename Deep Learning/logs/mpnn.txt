@@ -1,0 +1,15 @@
+https://docs.google.com/spreadsheets/d/1oSqU9RNJU19MsmZZQ47gUh2n21fZj9PAkyiMwxllClU/edit?usp=sharing
+
+Início: 2024-06-02 00:58:13.666577
+Spec:
+{'i': ('hint', 'node', 'mask_one'),
+ 'j': ('hint', 'node', 'mask_one'),
+ 'key': ('input', 'node', 'scalar'),
+ 'p': ('hint', 'node', 'mask_one'),
+ 'pos': ('input', 'node', 'scalar'),
+ 'pred': ('output', 'node', 'pointer'),
+ 'pred_h': ('hint', 'node', 'pointer'),
+ 'r': ('hint', 'node', 'mask_one')}
+Creating new model
+
+Fim: 2024-06-02 03:02:33.536050
