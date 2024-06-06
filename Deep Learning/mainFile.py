@@ -28,7 +28,7 @@ train_sampler, spec = clrs.build_sampler(
 test_sampler, spec = clrs.build_sampler(
     name=algorithm_type,
     num_samples=100,
-    length=64
+    length=32
 )
 
 print("Spec:")
