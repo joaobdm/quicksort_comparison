@@ -12,12 +12,12 @@ print(datetime.datetime.now())
 # my_checkpoint_path = '/home/felipe/Me/doutorado/quicksort_comparison/tmp/checkpt/'
 my_checkpoint_path = './tmp/checkpt/'
 
-best_model_name = 'pgn_bellman_ford.pkl'
+best_model_name = 'pgn_10000.pkl'
 
 rng = np.random.RandomState(1234)
 rng_key = jax.random.PRNGKey(rng.randint(2**32))
 
-algorithm_type = 'bellman_ford'
+algorithm_type = 'quicksort'
     
 train_sampler, spec = clrs.build_sampler(
     name=algorithm_type,
@@ -75,7 +75,7 @@ else:
 print('step;loss;val_acc;test_acc;timestamp')
 step = 0
 best_score = 0
-while step <= 5000:
+while step <= 10000:
     feedback, test_feedback = next(train_sampler), next(test_sampler)
     rng_key, new_rng_key = jax.random.split(rng_key)
     cur_loss = model.feedback(rng_key, feedback)
