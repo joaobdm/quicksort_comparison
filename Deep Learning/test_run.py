@@ -5,15 +5,15 @@ import os.path
 import pprint as ppr
 import datetime
 
-# Caminho do checkpoint e nome do modelo salvo
+
 checkpoint_path = './tmp/checkpt/'
 model_name = 'mpnn_10000.pkl'
 
-# Gerar chave aleatória
+
 rng = np.random.RandomState(1234)
 rng_key = jax.random.PRNGKey(rng.randint(2**32))
 print('rng_key',rng_key)
-# Especificar o tipo de algoritmo
+
 algorithm_type = 'quicksort'
 
 # Construir sampler para testar o modelo com novos dados
@@ -32,7 +32,6 @@ def _iterate_sampler(sampler, batch_size):
 
 test_sampler = _iterate_sampler(test_sampler, batch_size=32)
 
-# Configurações do modelo
 processor_factory = clrs.get_processor_factory('mpnn', use_ln=True)
 model_params = dict(
     processor_factory=processor_factory,
@@ -82,7 +81,7 @@ def test_model(model, sampler, num_tests):
 print('Início: ', end='') 
 start = datetime.datetime.now()
 print(start)
-accuracies = test_model(model, test_sampler, num_tests=100000)
+accuracies = test_model(model, test_sampler, num_tests=1000)
 print("Acurácias das execuções de teste:")
 print(accuracies)
 print("Acurácia média:", np.mean(accuracies))
