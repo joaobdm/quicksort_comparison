@@ -4,15 +4,18 @@ import jax
 import os.path
 import pprint as ppr
 import datetime
+import time
+from sys_monitoring import start_monitoring, stop_monitoring
 
 
 checkpoint_path = './tmp/checkpt/'
 model_name = 'mpnn_10000.pkl'
-
+TEST_ARRAY_LENGTH = 32
+NUM_OF_TESTS = 100000
 
 rng = np.random.RandomState(1234)
 rng_key = jax.random.PRNGKey(rng.randint(2**32))
-print('rng_key',rng_key)
+# print('rng_key',rng_key)
 
 algorithm_type = 'quicksort'
 
@@ -20,11 +23,11 @@ algorithm_type = 'quicksort'
 test_sampler, spec = clrs.build_sampler(
     name=algorithm_type,
     num_samples=100,  # Número de amostras de teste
-    length=16         # Tamanho das amostras de teste
+    length=TEST_ARRAY_LENGTH         # Tamanho das amostras de teste
 )
 
-print("Spec:")
-ppr.pprint(spec)
+# print("Spec:")
+# ppr.pprint(spec)
 
 def _iterate_sampler(sampler, batch_size):
     while True:
@@ -60,9 +63,9 @@ model.init(dummy_trajectory.features, 1234)
 # Carregar o modelo salvo
 if os.path.isfile(checkpoint_path + model_name):
     model.restore_model(model_name)
-    print('Modelo carregado com sucesso')
-else:
-    print('Erro: Modelo salvo não encontrado')
+    # print('Modelo carregado com sucesso')
+# else:
+#     print('Erro: Modelo salvo não encontrado')
 
 # Testar o modelo com novos dados
 def test_model(model, sampler, num_tests):
@@ -80,8 +83,14 @@ def test_model(model, sampler, num_tests):
 # Executar o teste
 print('Início: ', end='') 
 start = datetime.datetime.now()
+
 print(start)
-accuracies = test_model(model, test_sampler, num_tests=1000)
+print(f'MODEL FILE:{model_name}, ALGORITHM TYPE: {algorithm_type}, TEST ARRAY LENGTH: {TEST_ARRAY_LENGTH}, NUMBER OF TESTS: {NUM_OF_TESTS}')
+start_log_time = time.time()
+start_monitoring(model_name,TEST_ARRAY_LENGTH,NUM_OF_TESTS)
+accuracies = test_model(model, test_sampler, num_tests=NUM_OF_TESTS)
+end_log_time = time.time()
+stop_monitoring(end_log_time - start_log_time)
 print("Acurácias das execuções de teste:")
 print(accuracies)
 print("Acurácia média:", np.mean(accuracies))
