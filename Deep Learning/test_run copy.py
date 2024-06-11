@@ -9,9 +9,9 @@ from sys_monitoring import start_monitoring, stop_monitoring
 
 
 checkpoint_path = './tmp/checkpt/'
-model_name = 'pgn_10000.pkl'
-TEST_ARRAY_LENGTH = 64
-NUM_OF_TESTS = 10000
+model_name = 'test.pkl'
+TEST_ARRAY_LENGTH = 32
+NUM_OF_TESTS = 10
 
 rng = np.random.RandomState(1234)
 rng_key = jax.random.PRNGKey(rng.randint(2**32))
@@ -22,18 +22,24 @@ algorithm_type = 'quicksort'
 # Construir sampler para testar o modelo com novos dados
 test_sampler, spec = clrs.build_sampler(
     name=algorithm_type,
-    num_samples=100,  # Número de amostras de teste
+    num_samples=1000,  # Número de amostras de teste
     length=TEST_ARRAY_LENGTH         # Tamanho das amostras de teste
 )
 
-# print("Spec:")
-# ppr.pprint(spec)
+print("Spec:")
+ppr.pprint(spec)
+
+print("test_sampler:")
+ppr.pprint(test_sampler)
 
 def _iterate_sampler(sampler, batch_size):
     while True:
         yield sampler.next(batch_size)
 
 test_sampler = _iterate_sampler(test_sampler, batch_size=32)
+
+print("test_sampler:")
+ppr.pprint(test_sampler)
 
 processor_factory = clrs.get_processor_factory('pgn', use_ln=True)
 model_params = dict(
@@ -58,20 +64,25 @@ model = clrs.models.BaselineModel(
     dummy_trajectory=dummy_trajectory,
     **model_params
 )
+
+print("model:")
+ppr.pprint(model)
+
 model.init(dummy_trajectory.features, 1234)
 
 # Carregar o modelo salvo
 if os.path.isfile(checkpoint_path + model_name):
     model.restore_model(model_name)
-    # print('Modelo carregado com sucesso')
-# else:
-#     print('Erro: Modelo salvo não encontrado')
+    print('Modelo carregado com sucesso')
+else:
+    print('Erro: Modelo salvo não encontrado')
 
 # Testar o modelo com novos dados
 def test_model(model, sampler, num_tests):
     accuracies = []
     for _ in range(num_tests):
         feedback = next(sampler)
+        print('feedback', feedback)
         predictions, _ = model.predict(rng_key, feedback.features)
         accuracy = clrs.evaluate(feedback.outputs, predictions)
         # print('feedback',feedback)

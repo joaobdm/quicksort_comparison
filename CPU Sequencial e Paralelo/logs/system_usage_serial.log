@@ -1,0 +1,31 @@
+2024-06-11 13:16:02,627 - -----Starting Log-----
+2024-06-11 13:16:03,659 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 16, CPU Usage: 19.3%, Memory Usage: 26.4%, GPU Usage: 0.0%
+2024-06-11 13:16:05,689 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 16, CPU Usage: 18.2%, Memory Usage: 26.3%, GPU Usage: 0.0%
+2024-06-11 13:16:07,716 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 16, CPU Usage: 18.8%, Memory Usage: 26.3%, GPU Usage: 14.000000000000002%
+2024-06-11 13:16:09,747 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 16, CPU Usage: 18.4%, Memory Usage: 26.2%, GPU Usage: 0.0%
+2024-06-11 13:16:11,776 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 16, CPU Usage: 18.4%, Memory Usage: 26.2%, GPU Usage: 4.0%
+2024-06-11 13:16:13,805 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 16, CPU Usage: 21.7%, Memory Usage: 26.3%, GPU Usage: 9.0%
+2024-06-11 13:16:15,832 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 16, CPU Usage: 17.9%, Memory Usage: 26.3%, GPU Usage: 0.0%
+2024-06-11 13:16:16,838 - Média uso de CPU: 18.957142857142856%, Média uso de Memória: 26.28571428571429%, Média uso de GPU: 3.857142857142857%
+2024-06-11 13:16:16,838 - -----Finishing Log, Elapsed Time: 13.337700 seconds-----
+2024-06-11 13:16:16,838 - -----Starting Log-----
+2024-06-11 13:16:17,865 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 32, CPU Usage: 24.1%, Memory Usage: 26.2%, GPU Usage: 12.0%
+2024-06-11 13:16:19,894 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 32, CPU Usage: 24.2%, Memory Usage: 26.3%, GPU Usage: 8.0%
+2024-06-11 13:16:21,924 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 32, CPU Usage: 25.4%, Memory Usage: 26.3%, GPU Usage: 8.0%
+2024-06-11 13:16:23,952 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 32, CPU Usage: 23.4%, Memory Usage: 26.4%, GPU Usage: 9.0%
+2024-06-11 13:16:25,980 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 32, CPU Usage: 25.4%, Memory Usage: 26.4%, GPU Usage: 9.0%
+2024-06-11 13:16:28,009 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 32, CPU Usage: 23.9%, Memory Usage: 26.3%, GPU Usage: 21.0%
+2024-06-11 13:16:30,038 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 32, CPU Usage: 23.3%, Memory Usage: 26.4%, GPU Usage: 9.0%
+2024-06-11 13:16:31,044 - Média uso de CPU: 21.6%, Média uso de Memória: 26.307142857142853%, Média uso de GPU: 7.357142857142857%
+2024-06-11 13:16:31,044 - -----Finishing Log, Elapsed Time: 13.995387 seconds-----
+2024-06-11 13:16:31,044 - -----Starting Log-----
+2024-06-11 13:16:32,071 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 28.2%, Memory Usage: 26.2%, GPU Usage: 0.0%
+2024-06-11 13:16:34,103 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 28.1%, Memory Usage: 26.3%, GPU Usage: 0.0%
+2024-06-11 13:16:36,135 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 31.5%, Memory Usage: 26.2%, GPU Usage: 0.0%
+2024-06-11 13:16:38,165 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 28.3%, Memory Usage: 26.3%, GPU Usage: 13.0%
+2024-06-11 13:16:40,195 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 27.8%, Memory Usage: 26.2%, GPU Usage: 0.0%
+2024-06-11 13:16:42,225 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 27.3%, Memory Usage: 26.3%, GPU Usage: 0.0%
+2024-06-11 13:16:44,253 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 27.1%, Memory Usage: 26.2%, GPU Usage: 0.0%
+2024-06-11 13:16:46,282 - Sort Method: Parallel Quicksort - for 1000 executions, Array Size: 64, CPU Usage: 13.1%, Memory Usage: 26.1%, GPU Usage: 0.0%
+2024-06-11 13:16:47,287 - Média uso de CPU: 23.35454545454546%, Média uso de Memória: 26.277272727272727%, Média uso de GPU: 5.2727272727272725%
+2024-06-11 13:16:47,288 - -----Finishing Log, Elapsed Time: 14.708086 seconds-----
