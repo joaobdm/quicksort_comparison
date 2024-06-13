@@ -17,7 +17,7 @@ best_model_name = 'pgn_10000.pkl'
 rng = np.random.RandomState(1234)
 rng_key = jax.random.PRNGKey(rng.randint(2**32))
 
-algorithm_type = 'quicksort'
+algorithm_type = 'quicksot'
     
 train_sampler, spec = clrs.build_sampler(
     name=algorithm_type,

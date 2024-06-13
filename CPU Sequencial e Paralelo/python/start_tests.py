@@ -1,8 +1,8 @@
 from parallel_vs_serial_sort import main
 
-NUM_OF_TEST = 5
-SAMPLE_ARRAY_SIZES = [100_000,1_000_000,10_000_000]
-executionTypes = [True,False]
+NUM_OF_TEST = 10_000
+SAMPLE_ARRAY_SIZES = [64]
+executionTypes = [True]
 
 for executionType in executionTypes:
     for array_size in SAMPLE_ARRAY_SIZES:

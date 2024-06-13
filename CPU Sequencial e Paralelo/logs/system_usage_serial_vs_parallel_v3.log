@@ -1,0 +1,11 @@
+2024-06-13 18:34:05,808 - -----Starting Log-----
+2024-06-13 18:34:06,839 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 22.9%, Memory Usage: 27.0%, GPU Usage: 36.0%
+2024-06-13 18:34:08,869 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 21.8%, Memory Usage: 27.0%, GPU Usage: 36.0%
+2024-06-13 18:34:10,902 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 22.4%, Memory Usage: 26.9%, GPU Usage: 36.0%
+2024-06-13 18:34:12,942 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 22.4%, Memory Usage: 27.0%, GPU Usage: 36.0%
+2024-06-13 18:34:13,950 - Média uso de CPU: 22.375%, Média uso de Memória: 26.975%, Média uso de GPU: 36.0%
+2024-06-13 18:34:13,950 - -----Finishing Log, Elapsed Time: 7.828518 seconds-----
+2024-06-13 18:34:52,113 - -----Starting Log-----
+2024-06-13 18:34:53,142 - Sort Method: Serial Quicksort - for 10000 executions, Array Size: 64, CPU Usage: 20.3%, Memory Usage: 27.5%, GPU Usage: 35.0%
+2024-06-13 18:34:54,147 - Média uso de CPU: 20.3%, Média uso de Memória: 27.5%, Média uso de GPU: 35.0%
+2024-06-13 18:34:54,147 - -----Finishing Log, Elapsed Time: 1.146003 seconds-----

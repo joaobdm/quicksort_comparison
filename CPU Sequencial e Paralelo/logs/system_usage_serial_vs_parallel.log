@@ -1,5 +1,5 @@
 2024-06-11 13:37:23,042 - -----Starting Log-----
-2024-06-11 13:37:25,300 - Sort Method: Serial Quicksort - for 1000000 executions, Array Size: 16, CPU Usage: 7.7%, Memory Usage: 18.4%, GPU Usage: 0.0%
+2024-06-11 13:37:25,300 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 16, CPU Usage: 7.7%, Memory Usage: 18.4%, GPU Usage: 0.0%
 2024-06-11 13:37:28,587 - Sort Method: Serial Quicksort - for 1000000 executions, Array Size: 16, CPU Usage: 7.0%, Memory Usage: 18.4%, GPU Usage: 0.0%
 2024-06-11 13:37:34,746 - Sort Method: Serial Quicksort - for 1000000 executions, Array Size: 16, CPU Usage: 6.7%, Memory Usage: 18.5%, GPU Usage: 0.0%
 2024-06-11 13:37:39,581 - Sort Method: Serial Quicksort - for 1000000 executions, Array Size: 16, CPU Usage: 6.8%, Memory Usage: 18.5%, GPU Usage: 0.0%
