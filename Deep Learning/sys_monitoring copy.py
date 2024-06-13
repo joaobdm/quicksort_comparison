@@ -5,8 +5,11 @@ import logging
 import threading
 import numpy as np
 
+
+
 # Configuração do log
-logging.basicConfig(filename='./logs/10_000_pgn_mpnn_combined.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+def logConfig(fileNameComplement):
+    logging.basicConfig(filename='./logs/system_usage_10_000_'+fileNameComplement+'_final_run.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Variável global para controlar a execução do loop
 keep_running = False
@@ -15,7 +18,7 @@ cpu_usage_list = []
 memory_usage_list = []
 gpu_usage_list = []
 
-def log_system_usage(sort_method, array_size, num_of_tests):
+def log_system_usage(sort_method,array_size,num_of_tests):
     global keep_running
     while keep_running:
         # Uso de CPU
@@ -32,27 +35,24 @@ def log_system_usage(sort_method, array_size, num_of_tests):
         # Registrando os dados no log
         logging.info(f'Sort Method: {sort_method}, Array Size: {array_size}, Number of Tests: {num_of_tests}, CPU Usage: {cpu_usage}%, Memory Usage: {memory_usage}%, GPU Usage: {gpu_usage}%')
         
-        # Adicionando Logs em listas
+        #Adicionando Logs em listas
         cpu_usage_list.append(cpu_usage)
         memory_usage_list.append(memory_usage)
         gpu_usage_list.append(gpu_usage)
 
-        # Verifica se a execução deve continuar
-        if not keep_running:
-            break
-
         # Esperar 1 segundo antes de fazer a próxima medição
         time.sleep(1)
 
-def start_monitoring(sort_method, array_size, num_of_tests):
+def start_monitoring(sort_method,array_size,num_of_tests,fileNameComplementParam):
+    logConfig(fileNameComplementParam)
     logging.info(f'-----Starting Log-----')
     global keep_running, monitor_thread
     keep_running = True
-    monitor_thread = threading.Thread(target=log_system_usage, args=(sort_method, array_size, num_of_tests))
+    monitor_thread = threading.Thread(target=log_system_usage, args=(sort_method,array_size,num_of_tests))
     monitor_thread.start()
     print("Monitoring started.")
 
-def stop_monitoring(elapsed_time):
+def stop_monitoring(elapsed_time):    
     global keep_running, monitor_thread
     keep_running = False
     if monitor_thread is not None:
@@ -65,10 +65,10 @@ def stop_monitoring(elapsed_time):
 # Exemplo de uso
 if __name__ == '__main__':
     # Iniciar o monitoramento
-    start_monitoring('Serial Quicksort', 100, 10, 'example')
+    start_monitoring('Serial Quicksort',100)
     
     # Simular tempo de execução (substitua isso pela lógica do seu programa)
     time.sleep(4)
     
     # Parar o monitoramento
-    stop_monitoring(4.0)
+    stop_monitoring()
