@@ -1,0 +1,5 @@
+Modelo,Acurácia Média,Acurácia Desvio Padrão,Acurácia Variância
+PGN 16,"83,60%","2,13%","0,05%"
+PGN 32,"65,80%","1,70%","0,03%"
+MPNN 16,"83,10%","2,16%","0,05%"
+MPNN 32,"61,40%","1,60%","0,03%"
