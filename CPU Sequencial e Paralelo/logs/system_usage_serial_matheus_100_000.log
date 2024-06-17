@@ -1,0 +1,21 @@
+2024-06-15 09:37:49,623 - -----Starting Log-----
+2024-06-15 09:37:50,646 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 16, CPU Usage: 16.3%, Memory Usage: 17.4%, GPU Usage: 28.999999999999996%
+2024-06-15 09:37:52,675 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 16, CPU Usage: 15.9%, Memory Usage: 17.0%, GPU Usage: 30.0%
+2024-06-15 09:37:54,709 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 16, CPU Usage: 15.7%, Memory Usage: 17.1%, GPU Usage: 28.999999999999996%
+2024-06-15 09:37:55,712 - Média uso de CPU: 15.966666666666669%, Média uso de Memória: 17.166666666666668%, Média uso de GPU: 29.333333333333332%
+2024-06-15 09:37:55,712 - -----Finishing Log, Elapsed Time: 6.086182 seconds-----
+2024-06-15 09:37:55,712 - -----Starting Log-----
+2024-06-15 09:37:56,748 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 14.9%, Memory Usage: 17.1%, GPU Usage: 30.0%
+2024-06-15 09:37:58,786 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 15.0%, Memory Usage: 17.1%, GPU Usage: 28.999999999999996%
+2024-06-15 09:38:00,819 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 14.9%, Memory Usage: 17.0%, GPU Usage: 30.0%
+2024-06-15 09:38:02,854 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 32, CPU Usage: 13.7%, Memory Usage: 17.1%, GPU Usage: 32.0%
+2024-06-15 09:38:03,856 - Média uso de CPU: 15.200000000000003%, Média uso de Memória: 17.11428571428571%, Média uso de GPU: 29.857142857142858%
+2024-06-15 09:38:03,857 - -----Finishing Log, Elapsed Time: 7.055824 seconds-----
+2024-06-15 09:38:03,857 - -----Starting Log-----
+2024-06-15 09:38:04,884 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 64, CPU Usage: 13.6%, Memory Usage: 17.1%, GPU Usage: 30.0%
+2024-06-15 09:38:06,934 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 64, CPU Usage: 14.3%, Memory Usage: 17.1%, GPU Usage: 28.999999999999996%
+2024-06-15 09:38:08,966 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 64, CPU Usage: 13.9%, Memory Usage: 17.0%, GPU Usage: 30.0%
+2024-06-15 09:38:11,002 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 64, CPU Usage: 14.6%, Memory Usage: 16.9%, GPU Usage: 30.0%
+2024-06-15 09:38:13,044 - Sort Method: Serial Quicksort - for 100000 executions, Array Size: 64, CPU Usage: 15.9%, Memory Usage: 17.0%, GPU Usage: 33.0%
+2024-06-15 09:38:14,051 - Média uso de CPU: 14.891666666666667%, Média uso de Memória: 17.075%, Média uso de GPU: 30.083333333333332%
+2024-06-15 09:38:14,051 - -----Finishing Log, Elapsed Time: 9.940675 seconds-----

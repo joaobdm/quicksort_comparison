@@ -6,7 +6,7 @@ import threading
 import numpy as np
 
 # Configuração do log
-logging.basicConfig(filename='../logs/system_usage_serial_vs_parallel_v3.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='../logs/system_usage_serial_matheus_100_000.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Variável global para controlar a execução do loop
 keep_running = False
