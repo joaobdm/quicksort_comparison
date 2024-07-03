@@ -1,8 +1,0 @@
-
-Generating reference sorted list using Python's "sorted" built-in function for validating correctness of serial version and parallel version of quicksort... Done!
-Execution time: 6.86835503578186 seconds
-Sorted array: [-9223187253411257396 -9223160710206637379 -9222867189262562084 ...
-  9222751336453448754  9223027450916240271  9223052236084453280]
-Validating result of cuda version of quicksort...
-    Congratulations, expected and actual lists are equal!
-

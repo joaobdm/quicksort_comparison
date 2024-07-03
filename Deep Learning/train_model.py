@@ -9,15 +9,16 @@ import os.path
 print('Início: ', end='') 
 print(datetime.datetime.now())
 
-# my_checkpoint_path = '/home/felipe/Me/doutorado/quicksort_comparison/tmp/checkpt/'
+model_type = 'pgn'
+
 my_checkpoint_path = './tmp/checkpt/'
 
-best_model_name = 'pgn_10000.pkl'
+best_model_name = model_type+'_10000_v2.pkl'
 
 rng = np.random.RandomState(1234)
 rng_key = jax.random.PRNGKey(rng.randint(2**32))
 
-algorithm_type = 'quicksot'
+algorithm_type = 'quicksort'
     
 train_sampler, spec = clrs.build_sampler(
     name=algorithm_type,
@@ -41,7 +42,7 @@ def _iterate_sampler(sampler, batch_size):
 train_sampler = _iterate_sampler(train_sampler, batch_size=16)
 test_sampler = _iterate_sampler(test_sampler, batch_size=32)
 
-proccessor_factory = clrs.get_processor_factory('pgn', use_ln=True)
+proccessor_factory = clrs.get_processor_factory(model_type, use_ln=True)
 model_params = dict(
     processor_factory=proccessor_factory,
     hidden_dim=64,
@@ -95,6 +96,8 @@ while step <= 10000:
         model.save_model(best_model_name)
 
         #ver https://github.com/google-deepmind/clrs/blob/master/clrs/examples/run.py
+    if step == 10000:
+        print(f'BEST MODEL SCORE: {best_score}')
 
 print('Fim: ', end='') 
 print(datetime.datetime.now())
